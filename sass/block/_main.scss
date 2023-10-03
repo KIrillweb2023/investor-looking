@@ -1,0 +1,103 @@
+.main{
+    min-height: 400px;
+    background: url("../img/main/Group\ 5.jpg") center (center / cover) no-repeat;
+    padding-top: 150px;
+    position: relative;
+    &__title{
+        font-size: 30px;
+        color: #ffffff;
+        font-weight: 400;
+        width: 410px;
+        position: relative;
+        z-index: 2;
+    }
+    &__wrapper{
+        display: flex;
+        width: 350px;
+        margin-top: 50px;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+        &-btn{
+            width: 70%;
+            border: none;
+            outline: none;
+            background-color: #004BBB;
+            height: 45px;
+            border-radius: 2px;
+            cursor: pointer;
+            transition: 0.2s all;
+            &:hover{
+                background-color: #fff;
+                a{
+                    color: #000;
+                }
+            }
+            a{
+                color: #fff;
+                font-size: 16px;
+                font-weight: 500;
+                text-decoration: none;
+            }
+        }
+        &-me{
+            color: #fff;
+            font-size: 16px;
+            font-weight: 400;
+            text-decoration: none;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+    &-checkbox{
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        row-gap: 5px;
+        z-index: 5;
+        .restangle{
+            background-color: rgba(255, 255, 255, 0.5);
+            width: 50px;
+            height: 27px;
+            display: flex;
+            border-radius: 15px;
+            align-items: center;
+            position: relative;
+            cursor: pointer;
+            
+            &-child{
+                display: block;
+                position: absolute;
+                left: 4px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 20px;
+                height: 20px;
+                border-radius: 100%;
+                background-color: #fff;
+                transition: 0.3s all;
+                &.active{
+                    left: 25px;
+                }
+            }
+        }
+        &__text{
+            font-size: 14px;
+            color: #ffffff;
+            font-weight: 400;
+        }
+    }
+    .arrow{
+        position: absolute;
+        left: 50%;
+        z-index: 5;
+        bottom: 10px;
+        transform: translateX(-50%);
+        cursor: pointer;
+    }
+}

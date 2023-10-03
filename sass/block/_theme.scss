@@ -1,0 +1,48 @@
+body{
+   
+    &.active{
+      .me{
+        background-color: #161616;
+        transition: 0.3s all;
+        &__title{
+            color: #ffffff;
+        }
+        &__wrapper{
+
+            &__task{
+                background-color: #fff;
+                .title{
+                    color: #282828;
+                }
+                .descr{
+                    color: #282828;
+                    font-weight: 500;
+                }
+            }
+            .photo{
+                background-color: #ffffff7c;
+            }
+        }
+      }
+      .advent{
+            background-color: #161616;
+            transition: 0.3s all;
+            &__title{
+                color: #ffffff;
+            }
+            &__wrapper{
+                &-item{
+                    background-color: #fff;
+                    .title{
+                        font-weight: 600;
+                        color: #282828;
+                    }
+                    .descr{
+                        font-weight: 500;
+                        color: #282828;
+                    }
+                }
+            }
+        }
+    }
+}
