@@ -255,6 +255,18 @@
     }
 }
 @media (max-width: 567px){
+    .main{
+        &__title{
+            width: 100%;
+        }
+    }
+    .me{
+        .me__wrapper {
+            grid-template-rows: repeat(5,135px);
+        }
+        
+        
+    }
     
     .application{
         &__text{
@@ -356,7 +368,7 @@
         }
         &__text{
             font-size: 16px;
-            text-align: center;
+            text-align: left;
         }
         &__items{
             &-child{
@@ -388,7 +400,8 @@
         &__title{
             font-size: 25px;
         }
-        &__wrapper{
+        &__wrapper{ 
+            grid-template-rows: repeat(2, 225px);
             &-item{
                 .title{
                     font-size: 16px;
@@ -535,7 +548,7 @@
             font-size: 20px;
         }
         &__wrapper{
-            grid-template-rows: repeat(2, minmax(220px, 1fr));
+            grid-template-rows: repeat(2, 225px);
             &-item{
                 .title{
                     font-size: 14px;
