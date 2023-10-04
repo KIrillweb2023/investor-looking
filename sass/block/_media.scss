@@ -270,6 +270,8 @@
     .main{
         &__title{
             width: 100%;
+            font-size: 24px;
+            margin-top: 100px;
         }
         &-checkbox{
             top: 100px;
@@ -345,10 +347,6 @@
     }
     .main{
         height: 75vh;
-        &__title{
-            font-size: 20px;
-            margin-top: 50px;
-        }
         &__wrapper{
             width: 285px;
             &-btn{
