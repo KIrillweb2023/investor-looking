@@ -285,11 +285,22 @@
 }
 @media (max-width: 480px){
     .header{
+        .wrapper{
+            width: 300px;
+        }
         &__media-logo{
             margin-top: 6px;
             img{
                 width: 30px;
             }
+        }
+        &__menu{
+            &-link{
+                font-size: 14px;
+            }
+        }
+        &__button{
+            font-size: 14px;
         }
         &__logo{
             
@@ -310,14 +321,34 @@
             }
         }
     }
+    .header{
+        &.active{
+            .wrapper{
+                width: 75%;
+            }
+        }
+    }
     .main{
+        height: 75vh;
         &__title{
             font-size: 20px;
+            margin-top: 50px;
         }
         &__wrapper{
             width: 285px;
             &-btn{
                 height: 40px;
+                a{
+                    font-size: 12px;
+                }
+            }
+            &-me{
+                font-size: 12px;
+            }
+        }
+        &-checkbox{
+            &__text{
+                font-size: 10px;
             }
         }
     }
@@ -387,6 +418,9 @@
                 &_name{
                     font-size: 14px;
                 }
+                .logo__company{
+                    width: 100px;
+                }
             }
         }
         .application__button{
@@ -413,6 +447,9 @@
         }
     }
     .footer{
+        .wrapper{
+            column-gap: 10px;
+        }
         &__navigation{
             &-title{
                 font-size: 16px;

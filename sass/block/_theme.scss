@@ -24,6 +24,39 @@ body{
             }
         }
       }
+      .application {
+        background-color: #232323;
+        &__title {
+            color: #fff;
+        }
+        &__text {
+            color: #fff;
+        }
+        &__items {
+            &-child {
+                border: 1px solid #fff;
+                .description {
+                    color: #fff;
+                }
+                &_name {
+                    .name {
+                       color: #fff; 
+                    }
+                    .date {
+                        color: #fff;
+                    }
+                }
+                &_status {
+                    color: #b8b6b6;
+                }
+                &_attrubutes {
+                    &-money {
+                        color: #b8b6b6;
+                    }
+                }
+            }
+        }
+    }
       .advent{
             background-color: #161616;
             transition: 0.3s all;
@@ -46,3 +79,4 @@ body{
         }
     }
 }
+
