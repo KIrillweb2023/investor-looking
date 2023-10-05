@@ -24,21 +24,58 @@ menuScroll(open, close, menu, links);
 const logo = document.querySelectorAll('.logo');
 const hamburger = document.querySelector('.ham');
 const closeImg = document.querySelector('.close-add');
-const logoCompany = document.querySelector('.logo__company');
+const logoCompany = document.querySelectorAll('.logo__company');
 function theme(checkbox, restangle, body, logoCompany){
     checkbox.addEventListener('click', (e) =>{
         restangle.classList.toggle('active');
         if(restangle.classList.contains('active')){
             //body.setAttribute('class', ''); 
             body.classList.add('active');
-            logoCompany.setAttribute('src', './icons/slider-tabs/tinkoff-white.svg');
+            logoCompany.forEach(logo =>{
+                logo.setAttribute('src', './icons/slider-tabs/tinkoff-white.svg');
+            });
         } else {
             body.classList.remove('active');
-            logoCompany.setAttribute('src', './icons/slider-tabs/tinkoff-dark.svg');
+            logoCompany.forEach(logo =>{
+                logo.setAttribute('src', './icons/slider-tabs/tinkoff-dark.svg');
+            });
         }
     });
 }
 theme(document.querySelector('.restangle'), document.querySelector('.restangle-child'), document.body, logoCompany);
+
+const tabsHeader = document.querySelectorAll('.tabs-item');
+const contentTabs = document.querySelectorAll('.application__items-child');
+const contentParentTabs = document.querySelector('.application__button');
+
+function contentTabOnVisible(){
+    contentTabs.forEach(item =>{
+        item.classList.add('hide');
+        item.classList.remove('show');
+    });
+    tabsHeader.forEach(item =>{
+        item.classList.remove('active')
+    });
+}
+function contentTabOffVisible(i = 0){
+    contentTabs[i].classList.add('show', 'fade');
+    contentTabs[i].classList.remove('hide');
+    tabsHeader[i].classList.add('active');
+}
+contentTabOnVisible();
+contentTabOffVisible();
+
+contentParentTabs.addEventListener('click', (event) =>{
+    const target = event.target;
+    if(target && target.classList.contains('tabs-item')){
+        tabsHeader.forEach((item, i) =>{
+            if(target == item){
+                contentTabOnVisible();
+                contentTabOffVisible(i);
+            }
+        });
+    }
+});
 
 
 

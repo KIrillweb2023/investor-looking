@@ -279,15 +279,17 @@
     }
     .me{
         .me__wrapper {
-            grid-template-rows: repeat(5,135px);
+            grid-template-rows: repeat(5, 140px);
         }
         
         
     }
     
     .application{
+        padding: 50px 0;
         &__text{
             text-align: left;
+            font-size: 14px;
         }
         &__items{
             
@@ -417,19 +419,20 @@
         &__items{
             &-child{
                 width: 88%;
-                height: 365px;
+                height: 385px;
                 &_descr{
                     .description{
                         font-size: 13px;
                     }
                 }
                 &_attrubutes{
+                    margin-top: 10px;
                     &-money{
                         font-size: 13px;
                     }
                 }
                 &_name{
-                    font-size: 14px;
+                    font-size: 12px;
                 }
                 .logo__company{
                     width: 100px;
@@ -448,7 +451,7 @@
             font-size: 25px;
         }
         &__wrapper{ 
-            grid-template-rows: repeat(2, 225px);
+            grid-template-rows: repeat(2, 235px);
             &-item{
                 .title{
                     font-size: 16px;
