@@ -1,3 +1,5 @@
+
+
 const open = document.querySelector('.hamburger');
 const close = document.querySelector('.close');
 const menu = document.querySelector('.header');
@@ -75,6 +77,26 @@ contentParentTabs.addEventListener('click', (event) =>{
         });
     }
 });
+
+
+const section = document.querySelector('.main');
+const header = document.querySelector('.header');
+function headerAnimationFrame(header, section){
+    window.addEventListener('scroll', () =>{
+        const offsetY = window.scrollY;
+        const scrollTopSection = section.clientHeight;
+       
+        if(offsetY >= scrollTopSection){
+            header.style.position = 'fixed';
+            header.classList.add('animation-header-scroll');
+        } else if(offsetY < scrollTopSection){
+            header.style.position = '';
+            header.classList.remove('animation-header-scroll');
+        }
+    });
+}
+
+headerAnimationFrame(header, section);
 
 
 
