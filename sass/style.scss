@@ -63,6 +63,15 @@ html{
         background-color: #004BBB;
     }
 }
+body::-webkit-scrollbar {
+    width: 13px;     
+  }
+body::-webkit-scrollbar-track {
+     background-color: #e2e2e2;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: #004BBB;
+}
 
 .close{
     display: none;

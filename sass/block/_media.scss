@@ -278,11 +278,9 @@
         }
     }
     .me{
-        .me__wrapper {
+        &__wrapper {
             grid-template-rows: repeat(5, 140px);
         }
-        
-        
     }
     
     .application{
@@ -290,9 +288,6 @@
         &__text{
             text-align: left;
             font-size: 14px;
-        }
-        &__items{
-            
         }
         .application__button{
             width: 100%;
@@ -322,7 +317,6 @@
             font-size: 14px;
         }
         &__logo{
-            
             &-text{
                 &-title{
                     font-size: 16px;
@@ -347,6 +341,7 @@
             }
         }
     }
+   
     .main{
         height: 75vh;
         &__wrapper{
@@ -419,11 +414,17 @@
         &__items{
             &-child{
                 width: 88%;
-                height: 385px;
                 &_descr{
                     .description{
                         font-size: 13px;
                     }
+                }
+                .logo__company{
+                    width: 100px;
+                }
+                .height{
+                    width: 180px;
+                    height: 50px;
                 }
                 &_attrubutes{
                     margin-top: 10px;
@@ -434,9 +435,7 @@
                 &_name{
                     font-size: 12px;
                 }
-                .logo__company{
-                    width: 100px;
-                }
+                
             }
         }
         .application__button{
@@ -451,8 +450,15 @@
             font-size: 25px;
         }
         &__wrapper{ 
-            grid-template-rows: repeat(2, 235px);
+            grid-template-rows: repeat(2, 160px);
+            .one{
+                height: 105px;
+            }
+            .two{
+                height: 105px;
+            }
             &-item{
+                
                 .title{
                     font-size: 16px;
                 }
@@ -537,12 +543,13 @@
     }
 
     .me{
+        padding: 50px 0;
         &__title{
-            font-size: 25px;
+            font-size: 20px;
         }
         &__wrapper{
             grid-template-columns: repeat(1, 1fr);
-            grid-template-rows: repeat(5, 165px);
+            grid-template-rows: repeat(5, 170px);
             &__task{
                 .title{
                     font-size: 16px;
@@ -589,7 +596,6 @@
         &__items{
             &-child{
                 width: 88%;
-                height: 365px;
                 &_descr{
                     .description{
                         font-size: 12px;
@@ -617,7 +623,6 @@
             font-size: 20px;
         }
         &__wrapper{
-            grid-template-rows: repeat(2, 225px);
             &-item{
                 .title{
                     font-size: 14px;
@@ -627,10 +632,10 @@
                 }
             }
             .one{
-                height: 160px;
+                height: 105px;
             }
             .two{
-                height: 160px;
+                height: 105px;
             }
         }
     }

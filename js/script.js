@@ -24,25 +24,24 @@ menuScroll(open, close, menu, links);
 const logo = document.querySelectorAll('.logo');
 const hamburger = document.querySelector('.ham');
 const closeImg = document.querySelector('.close-add');
-const logoCompany = document.querySelectorAll('.logo__company');
+const five = document.querySelector('.five');
+const sportmaster = document.querySelector('.sportmaster');
+const sberbank = document.querySelector('.sberbank');
+const tinkoff = document.querySelector('.tinkoff');
 function theme(checkbox, restangle, body, logoCompany){
     checkbox.addEventListener('click', (e) =>{
         restangle.classList.toggle('active');
         if(restangle.classList.contains('active')){
             //body.setAttribute('class', ''); 
             body.classList.add('active');
-            logoCompany.forEach(logo =>{
-                logo.setAttribute('src', './icons/slider-tabs/tinkoff-white.svg');
-            });
+            logoCompany.setAttribute('src', './icons/slider-tabs/tinkoff-white.svg');
         } else {
             body.classList.remove('active');
-            logoCompany.forEach(logo =>{
-                logo.setAttribute('src', './icons/slider-tabs/tinkoff-dark.svg');
-            });
+            logoCompany.setAttribute('src', './icons/slider-tabs/tinkoff-dark.svg');
         }
     });
 }
-theme(document.querySelector('.restangle'), document.querySelector('.restangle-child'), document.body, logoCompany);
+theme(document.querySelector('.restangle'), document.querySelector('.restangle-child'), document.body, tinkoff);
 
 const tabsHeader = document.querySelectorAll('.tabs-item');
 const contentTabs = document.querySelectorAll('.application__items-child');
