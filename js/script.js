@@ -1,4 +1,4 @@
-
+new WOW().init();
 
 const open = document.querySelector('.hamburger');
 const close = document.querySelector('.close');
@@ -88,6 +88,8 @@ function headerAnimationFrame(header, section){
        
         if(offsetY >= scrollTopSection){
             header.style.position = 'fixed';
+            header.style.width = '100%';
+            header.style.zIndex = '10';
             header.classList.add('animation-header-scroll');
         } else if(offsetY < scrollTopSection){
             header.style.position = '';

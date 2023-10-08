@@ -1,6 +1,5 @@
 .header{
-    height: 50px;
-    padding: 15px 45px;
+    min-height: 50px;
     background-color: #282828;
     .hamburger{
         display: none;
@@ -12,6 +11,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 15px 45px;
     }
     &__logo{
         display: flex;
